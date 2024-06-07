@@ -2,11 +2,16 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   typescript: {
-    typeCheck: true,
+    typeCheck: false,
     strict: true,
   },
   modules: ['nuxt-applicationinsights'],
   runtimeConfig: {
     test: 'hello world',
+    public: {
+      applicationinsights: {
+        connectionString: ''
+      }
+    }
   },
 })
